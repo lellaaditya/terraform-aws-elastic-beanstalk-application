@@ -17,7 +17,7 @@ data "aws_partition" "current" {
 
 resource "aws_elastic_beanstalk_application" "default" {
   count       = local.enabled ? 1 : 0
-  name        = module.this.id
+  name        = "ebsapp"
   description = var.description
   tags        = local.tags
 
